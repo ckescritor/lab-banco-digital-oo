@@ -1,18 +1,53 @@
-# Criando um Banco Digital com Java e Orientação a Objetos
+# Sistema Bancário em Java
 
-## 02/08/2021 - [Mentoria #1: Tire Suas Dúvidas Sobre Orientação a Objetos](https://www.youtube.com/watch?v=YS6ouOhkyNI)
+## Descrição
 
-Desafio: Considerando nosso conhecimento no domínio bancário, iremos abstrair uma solução Orientada a Objetos em Java. Para isso, vamos interpretar o seguinte cenário:
-“Um banco oferece aos seus clientes dois tipos de contas (corrente e poupança), as quais possuem as funcionalidades de depósito, saque e transferência (entre contas da própria instituição).”
+Este projeto simula um sistema bancário orientado a objetos em Java. O sistema inclui funcionalidades básicas de um banco, como contas correntes e poupança, além de validação de operações, gerenciamento de contas, relatórios e resumos. Adicionalmente, o sistema suporta o envio de notificações via SMS e e-mail para cada movimentação de conta.
 
-### Abstração
-Habilidade de concentrar-se nos aspectos essenciais de um domínio, ignorando características menos importantes ou acidentais. Nesse contexto, objetos são abstrações de entidades existentes no domínio em questão.
+## Funcionalidades
 
-### Encapsulamento
-Encapsular significa esconder a implementação dos objetos, criando assim interfaces de uso mais concisas e fáceis de usar/entender. O encapsulamento favorece principalmente dois aspectos de um sistema: a manutenção e a evolução.
+- **Contas Bancárias**: Suporte para contas correntes e contas poupança.
+- **Operações**: Depósito, saque, transferência entre contas.
+- **Notificações**: Envio de notificações via SMS e e-mail para cada transação realizada.
+- **Relatórios**: Geração de relatórios com extratos de todas as contas.
+- **Validações**: Validações de operações e gerenciamento de contas.
 
-### Herança
-Permite que você defina uma classe filha que reutiliza (herda), estende ou modifica o comportamento de uma classe pai. A classe cujos membros são herdados é chamada de classe base. A classe que herda os membros da classe base é chamada de classe derivada.
+## Estrutura do Projeto
 
-### Polimorfismo
-Capacidade de um objeto poder ser referenciado de várias formas, ou seja, é capacidade de tratar objetos criados a partir das classes específicas como objetos de uma classe genérica. Cuidado, polimorfismo não quer dizer que o objeto fica se transformando, muito pelo contrário, um objeto nasce de um tipo e morre daquele tipo, o que pode mudar é a maneira como nos referimos a ele.
+- **`Cliente.java`**: Representa um cliente do banco.
+- **`Conta.java`**: Classe abstrata que define as operações básicas de uma conta.
+- **`ContaCorrente.java`**: Implementação específica da conta corrente.
+- **`ContaPoupanca.java`**: Implementação específica da conta poupança.
+- **`Banco.java`**: Gerencia a lista de contas e fornece funcionalidades adicionais para o banco.
+- **`Transacao.java`**: Representa uma transação financeira realizada em uma conta.
+- **`IConta.java`**: Interface que define os métodos que uma conta deve implementar.
+- **`Main.java`**: Classe principal para execução do programa.
+
+
+## Uso
+
+1. **Criação de Cliente e Contas**
+
+    No código `Main.java`, um cliente é criado e duas contas são instanciadas: uma conta corrente e uma conta poupança.
+
+2. **Operações**
+
+    São realizadas operações de depósito e transferência entre as contas. As transações são notificadas via SMS e e-mail.
+
+3. **Geração de Relatório**
+
+    Após as operações, um relatório com os extratos de todas as contas é gerado.
+
+## Detalhes da Implementação
+
+- **Cliente**: Representa um cliente com um nome.
+- **Conta**: Classe abstrata que define operações básicas como depósito, saque e transferência. Inclui funcionalidades de envio de notificações e impressão de extratos.
+- **ContaCorrente** e **ContaPoupanca**: Implementações específicas da conta corrente e poupança, respectivamente.
+- **Banco**: Gerencia as contas e gera relatórios.
+- **Transacao**: Representa uma transação com tipo e valor.
+- **Notificações**: Simulação de envio de notificações para cada transação.
+
+
+
+
+
